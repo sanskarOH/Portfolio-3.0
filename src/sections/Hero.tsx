@@ -1,15 +1,12 @@
-import { GitHubCalendar } from "react-github-calendar"
-
+import SkillTerminal from "@/components/SkillTerminal"
 export default function Hero(){
     return(
         <section id="hero" className="py-24">
-            <div className="max-w-6xl mx-auto px-4">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-4">
                 {/*content*/}
-                <div className="wrapper border-gray-400 border-2 rounded-2xl">
-                    <div className="p-5">
-                    <GitHubCalendar className="" colorScheme="dark" username="sanskarOH" />
-                </div>
-                </div>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight " >Sanskar Diwedi</h1>
+                <SkillTerminal />
+
             </div>
         </section>
     )

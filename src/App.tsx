@@ -3,8 +3,9 @@ function App() {
  
   return (
     <>
-    <div className=" min-h-screen w-full flex justify-center">
-      <Hero />
+    <div className=" min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+      <Hero/>
+      
     </div>
       
     </>
