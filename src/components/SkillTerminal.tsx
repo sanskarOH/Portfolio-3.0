@@ -1,33 +1,68 @@
-"use client"
-
+import confetti from "canvas-confetti";
 import {
   AnimatedSpan,
   Terminal,
   TypingAnimation,
-} from "@/components/ui/terminal"
+} from "@/components/ui/terminal";
 
 export default function SkillTerminal() {
+  const handleClick = () => {
+    const end = Date.now() + 3 * 1000;
+    const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+
+    const frame = () => {
+      if (Date.now() > end) return;
+
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.5 },
+        colors,
+      });
+
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.5 },
+        colors,
+      });
+
+      requestAnimationFrame(frame);
+    };
+
+    frame();
+  };
+
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full max-w-6xl px-6">
-        <Terminal>
-          <TypingAnimation>
-            Hello, I am Sanskar Diwedi.
-          </TypingAnimation>
+    <div className="max-w-6xl mx-auto px-4">
+      <Terminal>
+        <TypingAnimation>Et Voilà!</TypingAnimation>
 
-          <AnimatedSpan delay={300}>
-            Developer
-          </AnimatedSpan>
+        <AnimatedSpan>Backend Engineer</AnimatedSpan>
+        <AnimatedSpan>Learner</AnimatedSpan>
 
-          <AnimatedSpan delay={600}>
-            Joker
-          </AnimatedSpan>
+        <TypingAnimation>Huzzah! You discovered me!</TypingAnimation>
 
-          <TypingAnimation delay={1000}>
-            Huzzah! You have successfully discovered me!
-          </TypingAnimation>
-        </Terminal>
-      </div>
+        {/* RIGHT-ALIGNED TERMINAL BUTTON */}
+        <AnimatedSpan delay={900} className="flex">
+          <button
+            className="
+              
+              font-mono text-sm
+              text-emerald-500
+              hover:underline
+              transition
+            "
+            onClick={handleClick}
+          >
+            $ click me
+          </button>
+        </AnimatedSpan>
+      </Terminal>
     </div>
-  )
+  );
 }
