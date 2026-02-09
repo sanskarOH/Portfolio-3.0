@@ -1,15 +1,15 @@
-import Hero from "./sections/Hero"
+import Hero from "./sections/Hero";
+import Layout from "./layout/Layout";
+import Aboutme from "./sections/Aboutme";
 function App() {
- 
   return (
     <>
-    <div className=" min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-      <Hero/>
-      
-    </div>
-      
+      <Layout>
+        <Hero />
+        <Aboutme />
+      </Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -40,9 +40,9 @@ export default function SkillTerminal() {
   return (
     <div className="max-w-6xl mx-auto px-4">
       <Terminal>
-        <TypingAnimation>Et Voilà!</TypingAnimation>
+        <TypingAnimation delay={300}>Et Voilà!</TypingAnimation>
 
-        <AnimatedSpan>Backend Engineer</AnimatedSpan>
+        <AnimatedSpan delay={300}>Backend Engineer</AnimatedSpan>
         <AnimatedSpan>Learner</AnimatedSpan>
 
         <TypingAnimation>Huzzah! You discovered me!</TypingAnimation>

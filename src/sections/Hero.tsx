@@ -24,7 +24,7 @@ export default function Hero() {
             gap-6
           "
         >
-          {/* BIG TERMINAL TILE */}
+          {/* big tile*/}
           <div
             className="flex
               md:col-span-2
@@ -36,27 +36,18 @@ export default function Hero() {
               justify-center
               items-center
             "
-          >
-            <MorphingText texts={text} />
-          </div>
+          ></div>
 
           {/* SMALL TILE 1 */}
           <div className="">
             <SkillTerminal />
           </div>
 
-          <div className="rounded-2xl border p-6">
-            <h3 className="font-semibold">Currently Learning</h3>
-            <p className="text-sm text-muted-foreground mt-2">
-              Cloud · Distributed Systems
-            </p>
-          </div>
-
-          <div className="md:col-span-3 rounded-2xl border p-6">
-            <p className="text-sm text-muted-foreground">
-              I enjoy building scalable backend systems and clean developer
-              experiences.
-            </p>
+          <div className="rounded-2xl border p-6 flex items-center justify-center">
+            <MorphingText
+              className="text-5xl md:text-5xl lg:text-6xl"
+              texts={text}
+            />
           </div>
         </div>
       </div>
